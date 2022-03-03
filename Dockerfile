@@ -18,8 +18,7 @@ RUN sudo apt-get install -y build-essential git vim
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
-RUN sudo  useradd test123 && printf "yourpassword\nyourpassword\n" |  sudo passwd test123
-
+RUN  printf "password\npassword\n" |  sudo passwd u51788
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
